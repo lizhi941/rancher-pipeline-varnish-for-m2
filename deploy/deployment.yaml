@@ -32,5 +32,13 @@ spec:
       containers:
       - name: varnish
         image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        env:
+        - name: VIRTUAL_HOST
+            value: nginx
+        - name: VIRTUAL_PORT
+            value: 80
+        - name: HTTPS_METHOD
+            value: noredirect
         ports:
         - containerPort: 80
+
