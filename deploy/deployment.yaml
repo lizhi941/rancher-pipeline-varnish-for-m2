@@ -34,7 +34,7 @@ spec:
         image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         env:
         - name: VIRTUAL_HOST
-          value: "nginx"
+          value: "varnish"
         - name: VIRTUAL_PORT
           value: "80"
         - name: HTTPS_METHOD
